@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact rapide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    input, textarea, button {
+      width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;
+    }
+    button {
+      background-color: #0b3c61; color: white; border: none; font-size: 16px; cursor: pointer;
+    }
+    button:hover {
+      background-color: #0a3353;
+    }
+  </style>
+</head>
+<body>
+  <h2>📨 Contact rapide</h2>
+  <form action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
+    <input type="text" name="Nom" placeholder="👤 Votre nom" required>
+    <input type="email" name="Email" placeholder="📧 Votre email (facultatif)">
+    <textarea name="Message" placeholder="💬 Votre message" required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://creme-des-cremes.github.io/AlloCoursesFormulaires/contact.html#merci">
+
+    <button type="submit">📩 Envoyer</button>
+  </form>
+
+  <div id="merci">
+    <p style="color: green; font-weight: bold;">Merci pour votre message ! Nous vous répondrons très bientôt.</p>
+  </div>
+</body>
+</html>
