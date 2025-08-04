@@ -19,7 +19,7 @@
 </head>
 <body>
   <h2>🛒 Formulaire de commande</h2>
-  <form action="https://formsubmit.co/allahyallydie@gmail.com" method="POST">
+  <form action="https://formsubmit.co/allocoursesn@gmail.com" method="POST">
     <input type="text" name="Nom complet" placeholder="👤 Nom complet" required>
     <input type="email" name="Email" placeholder="📧 Votre email" required>
     <input type="text" name="Téléphone" placeholder="📞 Téléphone / WhatsApp" required>
@@ -40,9 +40,21 @@
 
     <!-- Configuration FormSubmit -->
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://allocourses.sn/merci.html">
 
     <button type="submit">✅ Envoyer la commande</button>
   </form>
+
+  <div id="confirmation" style="display:none; padding: 15px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; margin-top: 20px;">
+    ✅ Merci pour votre commande ! Nous vous contacterons très bientôt via WhatsApp.
+  </div>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+      setTimeout(function () {
+        document.querySelector("form").style.display = "none";
+        document.getElementById("confirmation").style.display = "block";
+      }, 1000);
+    });
+  </script>
 </body>
 </html>
